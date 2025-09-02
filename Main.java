@@ -58,7 +58,7 @@ public class Main
        int dia,mes,ano;
        int status;
        int registro;
-       
+       //oiii
        //AUXILIAR DE status;
        int st;
        
