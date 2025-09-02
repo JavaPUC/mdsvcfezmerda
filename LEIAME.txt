@@ -1,0 +1,99 @@
+EXERCICIO: Definir um aplicativo, em JAVA, para implementar uma agenda 
+           de nomes, celulares, emails e data de nascimento.
+           Implementar um menu de opcoes para:
+                        CADASTAR
+                        CONSULTAR
+                        ALTERAR
+                        LISTAR
+                        DELETAR
+                        LISTAR ANIVERSARIOS
+                        LER DADOS DE ARQUIVO TXT
+                        GRAVAR DADOS EM ARQUIVO TXT
+                        
+**********************************************************
+ANDRE MENDELECK
+VERSAO: V1.2 
+ATENÇÃO: OPCOES DO MENU NAO INCORPORADAS A CLASSE Agenda
+**********************************************************
+
+
+**********************************************************************************
+***** *     ***** ***** ***** *****    ****  ***** ****   ***  *****
+*     *     *   * *     *     *        *   * *   * *   * *   * *
+*     *     ***** ***** ***** *****    *   * ***** *   * *   * *****
+*     *     *   *     *     * *        *   * *   * *   * *   *     *
+***** ***** *   * ***** ***** *****    ****  *   * ****   ***  *****
+**********************************************************************************
+CLASSE Dados :  contem a estrutura de dados para o cadastro das informações 
+
+ATRIBUTOS DA CLASSE:
+
+    String nome,celular,email;
+    String mensagemAniversario;
+    LocalDate dataAniversario;
+
+    //STATUS:
+    //0 - Nao Cadastrado ;  1 - Cadastrado ; 2 - Alterado ; 3 - Deletado
+    int status;
+
+
+METODOS DISPONIBILIZADOS:
+
+public Dados()
+public void Inicializar()
+public int Cadastrar(String nm, String cel, String eml, LocalDate niver)
+public int Alterar(String nm, String cel, String eml, LocalDate niver)
+public boolean Consultar(String nm)
+public boolean Deletar(String nm)
+public boolean Deletar()
+public String validarAniversario( LocalDate d)
+public String getNome()
+public String getCelular()
+public String getEmail()
+public LocalDate getDataAniversario()
+public int getStatus()
+public String getMensagemAniversario()
+
+
+**********************************************************************************
+***** *     ***** ***** ***** *****    ***** ***** ***** *    * ****  *****
+*     *     *   * *     *     *        *   * *     *     **   * *   * *   *
+*     *     ***** ***** ***** *****    ***** * *** ***** * *  * *   * *****
+*     *     *   *     *     * *        *   * *   * *     *  * * *   * *   *
+***** ***** *   * ***** ***** *****    *   * ***** ***** *   ** ****  *   *
+**********************************************************************************
+CLASSE Agenda : implementa a estrutura geral da agenda.
+
+ATRIBUTOS DA CLASSE:
+
+    private int maxCadastros=1000;
+    static private Dados[] dd;   
+    private int nCadastros;
+
+    private String nomeAgenda;
+
+
+METODOS DISPONIBILIZADOS:
+
+public Agenda(int tam, String nmAgenda)
+public Agenda()
+public void Inicializar()
+public int Cadastrar(String nm, String cel, String eml, LocalDate niver)
+public int getNumeroCadastros()
+public String getMensagemStatus(int st)
+public int Alterar(int pos,String nm, String cel, String eml, LocalDate niver)
+public int Deletar(String nm)
+public int Deletar(int p)
+public int Consultar(String nm)
+public String getNome(int pos)
+public String getCelular(int pos)
+public String getEmail(int pos)
+public LocalDate getDataAniversario(int pos)
+public int getStatus(int pos)
+public int lerArquivo()
+public int gravarArquivo()
+
+
+    
+
+
